@@ -66,7 +66,7 @@ router.post('/item/create/:categoryId/:subcategoryId', async (req, res) => {
       return res.status(400).json({ error: 'Item name and standard price are required.' });
     }
 
-    const allowedTypes = ['Veg', 'Non-Veg', 'Egg'];
+ const allowedTypes = ['Veg', 'Non-Veg', 'Egg', 'None'];
     if (type && !allowedTypes.includes(type)) {
       return res.status(400).json({ error: `Invalid type. Must be one of: ${allowedTypes.join(', ')}` });
     }
@@ -178,7 +178,7 @@ router.put('/updateitem/:categoryId/:subcategoryId/:itemId', async (req, res) =>
       return res.status(400).json({ error: 'Invalid ID(s).' });
     }
 
-    const allowedTypes = ['Veg', 'Non-Veg', 'Egg'];
+   const allowedTypes = ['Veg', 'Non-Veg', 'Egg','None'];
     if (type && !allowedTypes.includes(type)) {
       return res.status(400).json({ error: `Invalid type.` });
     }

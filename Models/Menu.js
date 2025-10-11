@@ -6,7 +6,7 @@ const ItemSchema = new mongoose.Schema({
   description: {type:String},
   type: {
     type: String,
-    enum: ['Veg', 'Non-Veg', 'Egg'],
+    enum: ['Veg', 'Non-Veg', 'Egg','None'],
     default: 'Veg'
   },
   price: {
